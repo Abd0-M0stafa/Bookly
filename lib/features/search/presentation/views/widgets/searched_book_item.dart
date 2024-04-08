@@ -34,10 +34,27 @@ class SearchedBookItem extends StatelessWidget {
                   fit: BoxFit.fill,
                   errorWidget: (context, url, error) {
                     return Container(
-                      color: Colors.black,
-                      child: const Icon(
-                        Icons.error,
-                        color: Colors.red,
+                      color: const Color.fromARGB(255, 109, 108, 108),
+                      child: const Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.error,
+                            size: 25,
+                            color: Color.fromARGB(255, 255, 17, 0),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            textAlign: TextAlign.center,
+                            'Image is not\navailable',
+                            style: TextStyle(
+                                fontSize: 12,
+                                color: Color.fromARGB(255, 255, 255, 255),
+                                fontWeight: FontWeight.bold),
+                          )
+                        ],
                       ),
                     );
                   },
